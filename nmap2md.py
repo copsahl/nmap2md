@@ -40,8 +40,8 @@ parser.set_defaults(print_empty=False)
 
 (options, args) = parser.parse_args()
 
-columns = options.columns.split(",")
-row_cells = options.rc.split(",")
+columns = options.columns.split(",") + ['Notes']
+row_cells = options.rc.split(",") + ['']
 
 sorting = options.sort.split(";")
 sorting_reverse = False
